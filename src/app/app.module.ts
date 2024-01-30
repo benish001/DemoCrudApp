@@ -5,30 +5,34 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from 'src/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { ToastrModule } from 'ngx-toastr';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { HttpClientModule } from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     LoginComponent,
-      CustomerDetailsComponent
-   ],
+    CustomerDetailsComponent,
+    NavigationBarComponent,
+    CreateCustomerComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    MatCardModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    ToastrModule.forRoot(), // ToastrModule added
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatButtonModule,
+    ToastrModule.forRoot() // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

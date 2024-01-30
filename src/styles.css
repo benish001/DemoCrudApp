@@ -4,3 +4,9 @@
     overflow: hidden;
     height: auto !important;
 }
+
+
+.center {
+    display: flex;
+    justify-content: center;
+}
